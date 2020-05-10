@@ -1,0 +1,22 @@
+version: "3"
+services:
+
+  db:
+    container_name: demo_db
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+      MYSQL_USER: demo
+      MYSQL_PASSWORD: 123456
+      MYSQL_DATABASE: demo
+    volumes:
+      - ./resources/schema/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - 3306:3306
+    networks:
+      - demo_network
+
+networks:
+  demo_network:
+    driver: bridge

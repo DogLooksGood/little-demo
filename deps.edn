@@ -1,0 +1,40 @@
+{:paths ["src" "resources"]
+
+ :deps
+ {org.clojure/clojure        {:mvn/version "1.10.1"}
+  ;; Websocket Client/Server
+  ;; https://github.com/ptaoussanis/sente
+  com.taoensso/sente         {:mvn/version "1.15.0"}
+  ;; HTTP Protocol
+  ;; https://github.com/ring-clojure/ring
+  ring/ring-core             {:mvn/version "1.8.1"}
+  ;; JSON support
+  ;; https://github.com/ring-clojure/ring-json
+  ring/ring-json             {:mvn/version "0.5.0"}
+  ;; WEB Server
+  ;; https://github.com/http-kit/http-kit
+  http-kit                   {:mvn/version "2.3.0"}
+  ;; JDBC Driver
+  ;; https://mvnrepository.com/artifact/mysql/mysql-connector-java
+  mysql/mysql-connector-java {:mvn/version "8.0.20"}
+  ;; JDBC Tools
+  ;; https://github.com/seancorfield/next-jdbc
+  org.clojure/java.jdbc      {:mvn/version "0.7.11"}
+  ;; Routing
+  ;; https://github.com/weavejester/compojure
+  compojure                  {:mvn/version "1.6.1"}
+  ;; HTML templating
+  ;; https://github.com/weavejester/hiccup
+  hiccup                     {:mvn/version "1.0.5"}}
+
+ :aliases
+ {:cljs {:extra-deps {org.clojure/clojurescript {:mvn/version "1.10.758"}
+                      ;; HTTP Transport
+                      ;; https://github.com/r0man/cljs-http
+                      cljs-http                 {:mvn/version "0.1.46"}
+                      ;; React Adapter
+                      ;; https://github.com/reagent-project/reagent
+                      reagent                   {:mvn/version "1.0.0-alpha1"}
+                      ;; Cljs Build Tool
+                      ;; https://github.com/thheller/shadow-cljs
+                      thheller/shadow-cljs      {:mvn/version "2.8.110"}}}}}
